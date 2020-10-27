@@ -8,7 +8,7 @@ public class TransformSuffix {
     public Integer commonWordId;
     public Integer suffixId;
     public Integer tenseId;
-    public Integer transSuffix;
+    public String transSuffix;
 
     public Integer getCommonWordId() {
         return commonWordId;
@@ -34,11 +34,11 @@ public class TransformSuffix {
         this.tenseId = tenseId;
     }
 
-    public Integer getTransSuffix() {
+    public String getTransSuffix() {
         return transSuffix;
     }
 
-    public void setTransSuffix(Integer transSuffix) {
+    public void setTransSuffix(String transSuffix) {
         this.transSuffix = transSuffix;
     }
 }

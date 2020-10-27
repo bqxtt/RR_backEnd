@@ -42,7 +42,7 @@ public interface TransformService {
      * @param commonWordId
      * @return
      */
-    List<TransformSuffix> getTransformSuffix(Integer tenseId, Integer suffixId, Integer commonWordId);
+    TransformSuffix getTransformSuffix(Integer tenseId, Integer suffixId, Integer commonWordId);
 
     /**
      * 获取所有后缀

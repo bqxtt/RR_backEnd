@@ -50,7 +50,7 @@ public interface TransformMapper {
      * @return
      */
     @Select("select * from transform_suffix where common_word_id = #{commonWordId} and suffix_id = #{suffixId} and tense_id = #{tenseId}")
-    List<TransformSuffix> getTransformSuffix(Integer tenseId, Integer suffixId, Integer commonWordId);
+    TransformSuffix getTransformSuffix(Integer tenseId, Integer suffixId, Integer commonWordId);
 
     /**
      * 获取所有后缀

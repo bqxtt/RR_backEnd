@@ -34,7 +34,7 @@ public class TransformServiceImpl implements TransformService {
     }
 
     @Override
-    public List<TransformSuffix> getTransformSuffix(Integer tenseId, Integer suffixId, Integer commonWordId) {
+    public TransformSuffix getTransformSuffix(Integer tenseId, Integer suffixId, Integer commonWordId) {
         return transformMapper.getTransformSuffix(tenseId,suffixId,commonWordId);
     }
 
