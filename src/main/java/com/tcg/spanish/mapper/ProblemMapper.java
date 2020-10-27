@@ -2,6 +2,7 @@ package com.tcg.spanish.mapper;
 
 import com.tcg.spanish.entity.Answer;
 import com.tcg.spanish.entity.Problem;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -50,6 +51,6 @@ public interface ProblemMapper {
      * @param maxScore
      * @return
      */
-    @Update("update game_score set max_score = #{maxScore} where user_open_id = #{userOpenId}")
+    @Insert("insert into game_score(user_open_id,max_score) values(#{userOpenId},#{maxScore}) ON DUPLICATE KEY UPDATE max_score = #{maxScore}")
     Integer updateMaxScoreByUserOpenId(String userOpenId, Integer maxScore);
 }

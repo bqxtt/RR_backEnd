@@ -31,10 +31,10 @@ public class ProblemController {
         return JSON.toJSONString(problemService.getMaxScoreByUserOpenId(userOpenId));
     }
 
-    @PostMapping("updateScore")
+    @PostMapping("/updateScore")
     public void updateScore(String userOpenId,Integer score) {
         Integer old = problemService.getMaxScoreByUserOpenId(userOpenId);
-        if(score > old) {
+        if(score >= old) {
             problemService.updateMaxScoreByUserOpenId(userOpenId,score);
         }
     }
